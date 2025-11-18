@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squidget</title>
+
+    <!-- Full Roboto font weights for reliable bold/medium -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+    --primary-color: #5850e0; /* Deep Logo Blue (A slightly adjusted, vibrant version of your logo's background) */
+    --secondary-color: #e6e0d4; /* Cream/Off-White (Matches your logo's text color) */
+    --accent-color: #20B2AA; /* Keep the Light Sea Green for CTA/Highlighting */
+    --text-color: #333;
+    --light-bg: #F8F8F8; /* A simple, near-white background */
+}
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Fix for bold text across all browsers */
+        strong, b {
+            font-weight: 700 !important;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* Your actual logo image */
+        .header-logo {
+            height: 55px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(135deg, var(--light-bg), var(--secondary-color));
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            transition: background-color 1s ease;
+        }
+
+        #hero h1 {
+            font-size: 3.5em;
+            color: var(--primary-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+        }
+
+        #hero p {
+            font-size: 1.3em;
+            max-width: 600px;
+        }
+
+        .product-image {
+            max-width: 300px;
+            border: 8px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: #198c86;
+        }
+
+        /* Benefits */
+        #benefits h2 {
+            font-size: 2.6em;
+            color: var(--primary-color);
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 40px;
+        }
+
+        .benefit-card {
+            background-color: var(--light-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Custom Shop */
+        #custom-shop {
+            background-color: var(--secondary-color);
+            padding: 80px 5%;
+        }
+
+        #custom-shop h2 {
+            font-size: 2.6em;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.4em;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+
+        .highlight {
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-container" onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth'})">
+        <img src="./Squidgetlogoo.png" alt="Squidget Logo" class="header-logo">
+    </div>
+    <nav>
+        <a href="#product">Product</a>
+        <a href="#benefits">Why Squidget?</a>
+        <a href="#custom-shop">Shop</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="hero">
+    <img src="./squidgetfinal.png" class="product-image" alt="Squidget logo: Squish more, stress less">
+    <h1 id="tagline">Squish more, stress less.</h1>
+    <p>Your <strong>personalised, handcrafted</strong> sensory solution.</p>
+    <a href="#custom-shop" class="cta-button">Design Your Squidget</a>
+</section>
+
+<section id="benefits">
+    <h2 id="product">✨ Why Choose a Squidget?</h2>
+    <div class="benefit-grid">
+        <div class="benefit-card">
+            <div class="icon">🧘</div>
+            <h3>Zen-like Focus</h3>
+            <p>Designed to help reduce stress, anxiety and improve focus.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="icon">🌈</div>
+            <h3>Totally Unique</h3>
+            <p>Every Squidget is handcrafted — no two are ever the same.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="icon">🔒</div>
+            <h3>Safe for All Ages</h3>
+            <p>No magnets, no hazards — just safe, soft sensory relief.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="icon">🔥</div>
+            <h3>Always Trending</h3>
+            <p>Limited editions, custom colours and mystery packs.</p>
+        </div>
+    </div>
+</section>
+
+<section id="custom-shop">
+    <h2>🛍️ Create Your Custom Squidget</h2>
+    <p>Choose your texture, colour, charm and even thermochromic pigments!</p>
+
+    <div class="benefit-grid">
+        <div class="benefit-card highlight">
+            <h3>The Mystery Pack</h3>
+            <p>Three unique Squidgets in a sealed bag — try all textures!</p>
+        </div>
+
+        <div class="benefit-card highlight">
+            <h3>Limited Edition: Turquoise</h3>
+            <p>Our special colour drop, perfect for gifting.</p>
+        </div>
+
+        <div class="benefit-card highlight">
+            <h3>Buy More, Save More</h3>
+            <p>Automatic discount when buying 2+ Squidgets.</p>
+        </div>
+    </div>
+
+    <br><br>
+    <a href="#" class="cta-button">Go to Store</a>
+</section>
+
+<footer id="contact">
+    <p>&copy; 2025 Squidget Enterprise. All Rights Reserved.</p>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/squidget" target="_blank">📷 Instagram</a>
+        <a href="https://www.tiktok.com/@squidget" target="_blank">🎶 TikTok</a>
+    </div>
+</footer>
+
+<script>
+    // Cycling tagline
+    const tagline = document.getElementById("tagline");
+    const slogans = [
+        "Squish more, stress less.",
+        "The aesthetic sensory toy.",
+        "Handcrafted stress relief.",
+        "Your next trending accessory."
+    ];
+    let i = 0;
+
+    setInterval(() => {
+        i = (i + 1) % slogans.length;
+        tagline.textContent = slogans[i];
+    }, 5000);
+
+    // Highlight animation for special offers
+    document.querySelectorAll(".highlight").forEach(card => {
+        setInterval(() => {
+            card.style.backgroundColor =
+                card.style.backgroundColor === "var(--primary-color)"
+                    ? "var(--light-bg)"
+                    : "var(--primary-color)";
+        }, 7000);
+    });
+</script>
+
+</body>
+</html>
