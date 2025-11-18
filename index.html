@@ -155,6 +155,21 @@
             grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
             gap: 40px;
         }
+        @media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .header-slogan {
+    font-size: 1.15rem;
+    white-space: normal;
+    text-align: left;
+    width: 100%;
+    line-height: 1.3;
+  }
+}
 
         .benefit-card {
             background-color: var(--light-bg);
@@ -278,7 +293,7 @@
 </section>
 
 <section id="benefits">
-    <h2 id="product">✨ Why Choose a Squidget?</h2>
+    <h2 id="product">✨ Why Choose Squidget? ✨</h2>
 
     <div class="benefit-grid">
         <div class="benefit-card">
@@ -369,3 +384,4 @@
 
 </body>
 </html>
+
